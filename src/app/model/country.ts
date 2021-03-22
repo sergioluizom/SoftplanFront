@@ -1,4 +1,5 @@
 import { Entity } from "./entity";
+import { Flag } from "./flag";
 import { OfficialLanguage } from "./officiallanguage";
 
 export class Country extends Entity{
@@ -9,6 +10,7 @@ capital: string;
 officialLanguages: OfficialLanguage [];
 address: string;
 version : Version;
+flag: Flag;
 }
 
 export enum Version {

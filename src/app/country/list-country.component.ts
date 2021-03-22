@@ -16,8 +16,7 @@ export class ListaCountryComponent implements OnInit {
   ngOnInit() {
     this.countryService.getCountries()
       .subscribe(
-        result => {          
-          console.log(result);
+        result => {                    
           this.countries = result;
         },
         error => console.log(error)
