@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  //routeApi: "https://softplanapi20210321110617.azurewebsites.net/api"
+  routeApi: "https://localhost:44397/api"
 };
 
 /*

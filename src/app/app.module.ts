@@ -13,19 +13,20 @@ import { AppComponent } from './app.component';
 import { MenuComponent } from './navegacao/menu/menu.component';
 import { HomeComponent } from './navegacao/home/home.component';
 import { FooterComponent } from './navegacao/footer/footer.component';
-import { ContatoComponent } from './institucional/contato/contato.component';
 import { rootRouterConfig } from './app.routes';
-import { ProdutoService } from './produtos/produtos.service';
-import { ListaProdutoComponent } from './produtos/lista-produto/lista-produto.component';
-
+import { CountryService } from './_services/country.service';
+import { ListaCountryComponent } from './country/list-country.component';
+import { authInterceptorProviders } from './_helpers/auth-interceptor';
+import { CountryComponent } from './country/country.component';
+ 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
     HomeComponent,
     FooterComponent,
-    ContatoComponent,
-    ListaProdutoComponent
+    CountryComponent,
+    ListaCountryComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +35,8 @@ import { ListaProdutoComponent } from './produtos/lista-produto/lista-produto.co
     [RouterModule.forRoot(rootRouterConfig, { useHash: false})]
   ],
   providers: [
-    ProdutoService,
+    CountryService,
+    authInterceptorProviders,
     {provide: APP_BASE_HREF, useValue: '/'}
   ],
   bootstrap: [AppComponent]
